@@ -1,0 +1,25 @@
+{
+    "name": "mcting/design",
+    "description": "PHP Common Design Patterns",
+    "type": "library",
+    "require": {
+        "php": "^7.3.8",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Herry",
+            "email": "yuandeng@aliyun.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MCTing\\Design\\": "src/"
+        },
+        "files": [
+            "src/IoC/helpers.php"
+        ]
+    }
+}
