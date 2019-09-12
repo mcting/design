@@ -1,8 +1,17 @@
 <?php
 
+use MCTing\Design\AutoLoader;
+use MCTing\Design\IoC\Container;
 use MCTing\Design\IoC\User;
 
-require "autoload.php";
+require "src/AutoLoader.php";
 
-$a = make(User::class);
-$a->run();
+AutoLoader::register();
+
+$cont = new Container();
+$cont->bind("user", User::class);
+
+try {
+    $cont->make("user")->run();
+} catch (Exception $e) {
+}
